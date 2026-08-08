@@ -24,6 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include "led.h"
 #include "buzzer.h"
+#include "led_flow.h"
 
 /* USER CODE END Includes */
 
@@ -110,6 +111,7 @@ int main(void)
   /* 题目3完成后，在这里调用封装好的流水灯初始化/运行函数 */
 
   /* USER CODE END 2 */
+  led_flow();
 uint8_t led_num = 5U;
 check_led_num(led_num);
   /* Infinite loop */
