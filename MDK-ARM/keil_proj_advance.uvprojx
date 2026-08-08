@@ -434,6 +434,11 @@
               <FileType>1</FileType>
               <FilePath>..\hardware\src\led_flow.c</FilePath>
             </File>
+            <File>
+              <FileName>led_blink.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\hardware\src\led_blink.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-void led_flow(void);
+void led_flow(int mode);
 
 #ifdef __cplusplus
 }

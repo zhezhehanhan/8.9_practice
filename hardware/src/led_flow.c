@@ -1,19 +1,38 @@
 #include "led.h"
 
-void led_flow(void)
+void led_flow(int mode)
 {
     uint8_t led_num = 1U;
-    uint16_t delay_time = 200U;
-    while(1)
-    {
-        led_num = 1U;
-        while(led_num <=4U)
+    
+    
+        switch( mode)
         {
-        
-        led_on(led_num);
-        HAL_Delay(delay_time);  
-        led_off(led_num);
-        led_num++;
-    }
-    }
+            case 1:
+             while(led_num <=4U)
+                    {
+                    led_blink(led_num);
+                    led_num++;
+                    }
+                    break;
+            case 2:
+            while(led_num<=2)
+            {
+                led_blink_double(led_num);
+                led_num++;
+            }
+            break;
+            case 3:
+            while(1)
+            {
+                led_blink_all(led_num);
+            }
+            break;
+            default:
+            break;
+
+
+        }
+
+       
+    
 }
