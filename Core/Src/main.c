@@ -30,7 +30,11 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+typedef enum {
+    MODE1 = 1,
+    MODE2 = 2,
+    MODE3 = 3,
+} LED_FLOW_MODE;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -55,7 +59,7 @@ static void MPU_Config(void);
 /* USER CODE BEGIN PFP */
  #define check_led_num(led_num) \
   ((led_num) > 4U ? 0 : (led_num))
-  #define int mode=1;
+  #define int signal=MODE2;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -112,7 +116,7 @@ int main(void)
   /* 题目3完成后，在这里调用封装好的流水灯初始化/运行函数 */
   while(1)
   {
-    led_flow(mode);
+    led_flow(signal);
   }
   
   /* USER CODE END 2 */
