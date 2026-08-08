@@ -52,6 +52,15 @@
 void SystemClock_Config(void);
 static void MPU_Config(void);
 /* USER CODE BEGIN PFP */
+ #define check_led_num(led_num) \
+  ((led_num) > 4U ? 0 : (led_num))
+/* USER CODE END PFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
 
 /* USER CODE END PFP */
 
@@ -101,7 +110,8 @@ int main(void)
   /* 题目3完成后，在这里调用封装好的流水灯初始化/运行函数 */
 
   /* USER CODE END 2 */
-
+uint8_t led_num = 5U;
+check_led_num(led_num);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -109,9 +119,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    led_on();
+    led_on(led_num);
     HAL_Delay(250U);
-    led_off();
+    led_off(led_num);
     HAL_Delay(250U);
   }
   /* USER CODE END 3 */
