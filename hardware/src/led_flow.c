@@ -1,5 +1,5 @@
 #include "led.h"
-
+#include "Timer.h"
 void led_flow(int mode)
 {
     uint8_t led_num = 1U;
@@ -7,6 +7,9 @@ void led_flow(int mode)
     
         switch( mode)
         {
+            case 0:
+            led_off_all();
+            break;
             case 1:
              while(led_num <=4U)
                     {
@@ -24,7 +27,7 @@ void led_flow(int mode)
             case 3:
             while(1)
             {
-                led_blink_all(led_num);
+                led_blink_all();
             }
             break;
             default:

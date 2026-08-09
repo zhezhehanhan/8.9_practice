@@ -90,25 +90,17 @@ void led_off_double(uint8_t led_num)
          break;
     }
 }
-void led_on_all(uint8_t led_num)
+void led_on_all(void)
 {
-    switch(led_num)
-    {
-       case 1:
+    
       HAL_GPIO_WritePin(LED_GPIO_PORT,led_all,GPIO_PIN_SET);
-      break;
-       default:
-         break;
+      
     }
-}
-void led_off_all(uint8_t led_num)
+
+void led_off_all(void)
 {
-    switch(led_num)
-    {
-       case 1:
+    
       HAL_GPIO_WritePin(LED_GPIO_PORT,led_all,GPIO_PIN_RESET);
-      break;
-       default:
-         break;
-    }
+      
+    
 }

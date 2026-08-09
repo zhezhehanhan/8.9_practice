@@ -15,7 +15,7 @@ typedef struct
 } led_config;
 void led_blink(uint8_t led_num);
 void led_blink_double(uint8_t led_num);
-void led_blink_all(uint8_t led_num);
+void led_blink_all();
 #ifdef __cplusplus
 }
 #endif

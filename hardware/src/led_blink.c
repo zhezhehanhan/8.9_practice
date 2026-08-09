@@ -24,10 +24,10 @@ void led_blink_double(led_num)
     HAL_Delay(led_cfg.off_ms);    
 }
 /*所有LED灯同时控制*/
-void led_blink_all(led_num)
-{led_cfg.led_num=led_num;
-    led_on_all(led_cfg.led_num);
+void led_blink_all(void)
+{
+    led_on_all();
     HAL_Delay(led_cfg.on_ms);
-    led_off_all(led_cfg.led_num);
+    led_off_all();
     HAL_Delay(led_cfg.off_ms);    
 }

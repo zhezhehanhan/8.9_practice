@@ -24,8 +24,8 @@ void led_on(uint8_t led_num);
 void led_off(uint8_t led_num);
 void led_on_double(uint8_t led_num);
 void led_off_double(uint8_t led_num);
-void led_on_all(uint8_t led_num);
-void led_off_all(uint8_t led_num);
+void led_on_all(void);
+void led_off_all(void);
 
 #ifdef __cplusplus
 }

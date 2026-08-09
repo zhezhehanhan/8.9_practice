@@ -25,12 +25,14 @@
 #include "led.h"
 #include "buzzer.h"
 #include "led_flow.h"
+#include "Timer.h"
 
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 typedef enum {
+    IDEL = 0,
     MODE1 = 1,
     MODE2 = 2,
     MODE3 = 3,
@@ -59,7 +61,7 @@ static void MPU_Config(void);
 /* USER CODE BEGIN PFP */
  #define check_led_num(led_num) \
   ((led_num) > 4U ? 0 : (led_num))
-  #define int signal=MODE2;
+  #define int signal=MODE1;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -116,7 +118,7 @@ int main(void)
   /* 题目3完成后，在这里调用封装好的流水灯初始化/运行函数 */
   while(1)
   {
-    led_flow(signal);
+    led_waterflow(signal);
   }
   
   /* USER CODE END 2 */
